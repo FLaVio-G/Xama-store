@@ -4,6 +4,7 @@ import { Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles.css";
+import { useNavigate } from "react-router-dom";
 
 interface Product {
   id: number;
@@ -29,6 +30,10 @@ const fetchProducts = async (): Promise<Product[]> => {
 const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
+  const handleRedirect = () => {
+    navigate("/all-products");
+  };
 
   useEffect(() => {
     fetchProducts()
@@ -74,6 +79,14 @@ const Products = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className="flex items-center justify-center">
+        <button
+          onClick={handleRedirect}
+          className="mb-[14px] mt-2 h-[32px] w-[250px] rounded-lg bg-black text-white"
+        >
+          Ver todos os produtos
+        </button>
+      </div>
     </>
   );
 };

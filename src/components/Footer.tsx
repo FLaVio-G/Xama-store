@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="flex flex-wrap-reverse items-center justify-center bg-red-500 px-[2rem] py-[2rem] md:px-[3rem] lg:flex-col lg:justify-normal">
+    <div className="flex flex-wrap-reverse items-center justify-center bg-gray-500 px-[2rem] py-[2rem] md:px-[3rem] lg:flex-col lg:justify-normal">
       <div className="mt-2 flex flex-col items-center justify-center gap-4 lg:mt-0 lg:flex-row lg:pt-[2rem]">
         <button className="btn glass h-[2.375rem] w-[12.1875rem] rounded-lg bg-white lg:mr-[1rem]">
           <div className="flex items-center justify-center">

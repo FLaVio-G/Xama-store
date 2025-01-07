@@ -1,21 +1,16 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import KeepBanner from "./components/KeepBanner";
-
-import Products from "./components/Products";
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import AllProducts from "./pages/AllProduct";
 import "./index.css";
 
 function App() {
   return (
-    <>
-      <div>
-        <Header />
-        <KeepBanner />
-        <Products />
-        <Footer />
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/all-products" element={<AllProducts />} />
+      </Routes>
+    </Router>
   );
 }
 
